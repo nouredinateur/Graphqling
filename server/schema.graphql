@@ -1,0 +1,19 @@
+import { gql } from 'apollo-server-express';
+
+export const typeDefs = gql`
+    type pendingTransactions{
+       id:ID
+       hash:String
+       toAdd:String
+       gas:String
+       gasPrice:String
+       maxFeePerGas:String
+       maxPriorityFeePerGas: String
+       time:String
+    }
+
+    type Query{
+        getAllTransactions:[pendingTransactions]
+    }
+
+`;
